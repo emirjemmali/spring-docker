@@ -133,6 +133,11 @@ public class Employee implements Serializable {
         this.bank = bank;
     }
 
+    public Employee addBank(Bank bank){
+        this.bank=bank;
+        return this;
+    }
+
     public Employee() {
     }
 

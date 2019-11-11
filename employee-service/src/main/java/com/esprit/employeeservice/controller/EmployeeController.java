@@ -3,13 +3,13 @@ package com.esprit.employeeservice.controller;
 import com.esprit.employeeservice.domain.Employee;
 import com.esprit.employeeservice.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Required;
 import org.springframework.data.rest.webmvc.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.websocket.server.PathParam;
 import java.util.List;
 
 @RestController
@@ -19,11 +19,10 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
-
-    @PostMapping()
-    public ResponseEntity<Employee> addEmployee(@RequestBody Employee employee) throws ResourceNotFoundException {
-        Employee emp = employeeService.saveEmployee(employee);
-        return ResponseEntity.ok().body(emp);
+    @PostMapping("/{idBank}")
+    public ResponseEntity<Employee> addEmployee(@RequestBody Employee employee, @PathVariable String idBank) throws ResourceNotFoundException {
+        Employee emp = employeeService.saveEmployee(employee, idBank);
+        return ResponseEntity.ok(emp);
     }
 
     @PutMapping()
@@ -51,54 +50,38 @@ public class EmployeeController {
     }
 
     @GetMapping("/{id}")
-    ResponseEntity<String> findEmployeeById(@PathVariable("id") String id) {
+    ResponseEntity<Employee> findEmployeeById(@PathVariable("id") String id) {
 
         if (!id.equals(null)) {
             Employee employee=employeeService.getEmployeeById(id);
-            return new ResponseEntity<>(
-                "your employee is: " + employee,
-                HttpStatus.OK);
+            return ResponseEntity.ok(employee);
         }
 
-        return new ResponseEntity<>(
-            "there's no employee ",
-            HttpStatus.BAD_REQUEST);
+        return ResponseEntity.notFound().build();
 
     }
 
-    @GetMapping("/email")
-    ResponseEntity<String> findEmployeeByEmail(@RequestParam String email) {
+    @GetMapping("/byEmail")
+    ResponseEntity<Employee> findEmployeeByEmail(@RequestParam String email) {
 
         if (!email.equals(null)){
             Employee employee=employeeService.getEmployeeByEmail(email);
-            return new ResponseEntity<>(
-                "your employee is: " + employee,
-                HttpStatus.OK);
+            return ResponseEntity.ok(employee);
         }
 
-        return new ResponseEntity<>(
-            "there's no employee ",
-            HttpStatus.BAD_REQUEST);
+        return ResponseEntity.notFound().build();
 
     }
 
     @GetMapping()
-    ResponseEntity<String> findAllEmployees() {
+    ResponseEntity<List<Employee>> findAllEmployees() {
 
             List<Employee> employees = employeeService.getAllEmployees();
             if (!employees.isEmpty()) {
-                return new ResponseEntity<>(
-                    "employees are: " + employees,
-                    HttpStatus.OK);
+                return ResponseEntity.ok(employees);
             }
 
-        return new ResponseEntity<>(
-            "there's no employee ",
-            HttpStatus.BAD_REQUEST);
+        return ResponseEntity.notFound().build();
 
     }
-
-
-
-
 }

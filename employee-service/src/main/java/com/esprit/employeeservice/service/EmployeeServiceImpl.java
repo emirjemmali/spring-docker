@@ -1,6 +1,8 @@
 package com.esprit.employeeservice.service;
 
+import com.esprit.employeeservice.domain.Bank;
 import com.esprit.employeeservice.domain.Employee;
+import com.esprit.employeeservice.repository.BankRepository;
 import com.esprit.employeeservice.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,9 +16,14 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Autowired
     private EmployeeRepository employeeRepository;
 
-    @Override
-    public Employee saveEmployee(Employee employee) {
+    @Autowired
+    private BankRepository bankRepository;
 
+    @Override
+    public Employee saveEmployee(Employee employee, String idBank) {
+        Bank bank=new Bank();
+        bank=bankRepository.findById(idBank).get();
+        employee.addBank(bank);
         return employeeRepository.save(employee);
     }
 
@@ -39,7 +46,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     public Employee getEmployeeById(String id) {
 
         Employee employee= employeeRepository.findById(id).get();
-        if(!employee.equals(null)) {
+        if(employee!=null) {
             return employee;
         }
         return null;
@@ -48,8 +55,8 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public Employee getEmployeeByEmail(String email) {
 
-        Employee employee= employeeRepository.findEmployeeByEmail(email);
-        if(!employee.equals(null)){
+        Employee employee= employeeRepository.findByEmail(email);
+        if(employee != null){
             return employee;
         }
         return null;

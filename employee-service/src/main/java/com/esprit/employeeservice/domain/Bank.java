@@ -114,6 +114,12 @@ public class Bank implements Serializable {
         this.employees = employees;
     }
 
+    public Bank addEmployees(Employee employee){
+        this.employees.add(employee);
+        employee.setBank(this);
+        return this;
+    }
+
     public Bank() {
     }
 

@@ -6,7 +6,4 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource
 public interface BankRepository extends JpaRepository<Bank,String> {
-
-    Bank findBankByBankPaymentMode(String payment);
-
 }
