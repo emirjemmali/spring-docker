@@ -1,0 +1,334 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Polo, premium HTML5 &amp; CSS3 template</title>
+
+    <!-- Favicons Icon -->
+    <link rel="icon" href="http://demo.magikthemes.com/skin/frontend/base/default/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="http://demo.magikthemes.com/skin/frontend/base/default/favicon.ico"
+          type="image/x-icon"/>
+
+    <!-- Mobile Specific -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/revslider.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}" type="text/css">
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,700,800,400,600'
+          rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+<div class="page">
+    <!-- Header -->
+    <header class="header-container">
+
+        <div class="header container">
+            <div class="row">
+                <div class="col-lg-2 col-sm-3 col-md-2">
+                    <!-- Header Logo -->
+                    <a class="logo" title="Magento Commerce" href="index.html"><img alt="Magento Commerce" width="150px"
+                                                                                    src="{% static 'images/mediatheque.png' %}"></a>
+                    <!-- End Header Logo -->
+                </div>
+
+                <!-- Top Cart -->
+                <div class="col-lg-2 col-sm-3 col-md-2">
+                    <div class="top-cart-contain">
+
+                        <div id="ajaxconfig_info"><a href="#/"></a>
+                            <input value="" type="hidden">
+                            <input id="enable_module" value="1" type="hidden">
+                            <input class="effect_to_cart" value="1" type="hidden">
+                            <input class="title_shopping_cart" value="Go to shopping cart" type="hidden">
+                        </div>
+                    </div>
+                </div>
+                <!-- End Top Cart -->
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
+    <!-- Navbar -->
+    <nav>
+        <div class="container">
+            <div class="nav-inner">
+                <div class="logo-small"><a class="logo" title="Magento Commerce" href="index.html"><img
+                        alt="Magento Commerce" width="200px" src="{% static 'images/mediatheque.png' %}"></a></div>
+                <!-- mobile-menu -->
+                <div class="hidden-desktop" id="mobile-menu">
+                    <ul class="navmenu">
+                        <li>
+                            <div class="menutop">
+                                <div class="toggle"><span class="icon-bar"></span> <span class="icon-bar"></span> <span
+                                        class="icon-bar"></span></div>
+                                <h2>Menu</h2>
+                            </div>
+                            <ul class="submenu">
+                                <li>
+                                    <ul class="topnav">
+                                        <li class="level0 nav-6 level-top first parent"><a class="level-top" href="#">
+                                            <span>Pages</span> </a>
+                                            <ul class="level0">
+                                                <li class="level1 first"><a href="grid.html"><span>Grid</span></a></li>
+                                                <li class="level1 nav-10-2"><a href="list.html"> <span>List</span> </a>
+                                                </li>
+                                                <li class="level1 nav-10-3"><a href="product_detail.html"> <span>Product Detail</span>
+                                                </a></li>
+                                                <li class="level1 nav-10-4"><a href="shopping_cart.html"> <span>Shopping Cart</span>
+                                                </a></li>
+                                                <li class="level1 first"><a
+                                                        href="checkout.html"><span>Checkout</span></a></li>
+                                                <li class="level1 nav-10-4"><a href="wishlist.html">
+                                                    <span>Wishlist</span> </a></li>
+                                                <li class="level1"><a href="dashboard.html"> <span>Dashboard</span> </a>
+                                                </li>
+                                                <li class="level1"><a href="multiple_addresses.html"> <span>Multiple Addresses</span>
+                                                </a></li>
+                                                <li class="level1"><a href="about_us.html"> <span>About us</span> </a>
+                                                </li>
+                                                <li class="level1"><a href="compare.html"> <span>Compare</span> </a>
+                                                </li>
+                                                <li class="level1"><a href="faq.html"> <span>FAQ</span> </a></li>
+                                                <li class="level1"><a href="login.html"> <span>Login</span> </a></li>
+                                                <li class="level1"><a href="quick_view.html"> <span>Quick view</span>
+                                                </a></li>
+                                                <li class="level1"><a href="blog.html"><span>Blog</span></a></li>
+                                                <li class="level1"><a href="contact_us.html"><span>Contact us</span></a>
+                                                </li>
+                                                <li class="level1"><a
+                                                        href="404error.html"><span>404 Error Page</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="level0 nav-7 level-top parent"><a class="level-top" href="grid.html">
+                                            <span>Women</span> </a>
+                                            <ul class="level0">
+                                                <li class="level1 nav-1-1 first parent"><a href="grid.html"> <span>Clothing</span>
+                                                </a>
+                                                    <ul class="level1">
+                                                        <li class="level2 nav-1-1-1 first"><a href="grid.html"> <span>Western Wear</span>
+                                                        </a></li>
+                                                        <li class="level2 nav-1-1-2"><a href="grid.html"> <span>Night Wear</span>
+                                                        </a></li>
+                                                        <li class="level2 nav-1-1-3"><a href="grid.html"> <span>Ethnic Wear</span>
+                                                        </a></li>
+                                                        <li class="level2 nav-1-1-4 last"><a href="grid.html"> <span>Designer Wear</span>
+                                                        </a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="level1 nav-1-2 parent"><a href="grid.html">
+                                                    <span>Watches</span> </a>
+                                                    <ul class="level1">
+                                                        <li class="level2 nav-1-2-5 first"><a href="grid.html"> <span>Fashion</span>
+                                                        </a></li>
+                                                        <li class="level2 nav-1-2-6"><a href="grid.html">
+                                                            <span>Dress</span> </a></li>
+                                                        <li class="level2 nav-1-2-7"><a href="grid.html">
+                                                            <span>Sports</span> </a></li>
+                                                        <li class="level2 nav-1-2-8 last"><a href="grid.html"> <span>Casual</span>
+                                                        </a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="level1 nav-1-3 parent"><a href="grid.html"> <span>Styliest Bag</span>
+                                                </a>
+                                                    <ul class="level1">
+                                                        <li class="level2 nav-1-3-9 first"><a href="grid.html"> <span>Clutch Handbags</span>
+                                                        </a></li>
+                                                        <li class="level2 nav-1-3-10"><a href="grid.html"> <span>Diaper Bags</span>
+                                                        </a></li>
+                                                        <li class="level2 nav-1-3-11"><a href="grid.html">
+                                                            <span>Bags</span> </a></li>
+                                                        <li class="level2 nav-1-3-12 last"><a href="grid.html"> <span>Hobo Handbags</span>
+                                                        </a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="level1 nav-1-4 last parent"><a href="grid.html"> <span>Material Bag</span>
+                                                </a>
+                                                    <ul class="level1">
+                                                        <li class="level2 nav-1-4-13 first"><a href="grid.html"> <span>Beaded Handbags</span>
+                                                        </a></li>
+                                                        <li class="level2 nav-1-4-14"><a href="grid.html"> <span>Fabric Handbags</span>
+                                                        </a></li>
+                                                        <li class="level2 nav-1-4-15"><a href="grid.html"> <span>Handbags</span>
+                                                        </a></li>
+                                                        <li class="level2 nav-1-4-16 last"><a href="grid.html"> <span> Handbags</span>
+                                                        </a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="level0 nav-8 level-top parent"><a class="level-top" href="grid.html">
+                                            <span>Men</span> </a>
+                                            <ul class="level0">
+                                                <li class="level1 nav-2-1 first parent"><a href="grid.html"> <span>Clothing</span>
+                                                </a>
+                                                    <ul class="level1">
+                                                        <li class="level2 nav-2-1-1 first"><a href="grid.html"> <span>Casual Wear</span>
+                                                        </a></li>
+                                                        <li class="level2 nav-2-1-2"><a href="grid.html"> <span>Formal Wear</span>
+                                                        </a></li>
+                                                        <li class="level2 nav-2-1-3"><a href="grid.html"> <span>Ethnic Wear</span>
+                                                        </a></li>
+                                                        <li class="level2 nav-2-1-4 last"><a href="grid.html"> <span>Denims</span>
+                                                        </a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="level1 nav-2-2 parent"><a href="grid.html">
+                                                    <span>Shoes</span> </a>
+                                                    <ul class="level1">
+                                                        <li class="level2 nav-2-2-5 first"><a href="grid.html"> <span>Formal Shoes</span>
+                                                        </a></li>
+                                                        <li class="level2 nav-2-2-6"><a href="grid.html"> <span>Sport Shoes</span>
+                                                        </a></li>
+                                                        <li class="level2 nav-2-2-7"><a href="grid.html"> <span>Canvas Shoes</span>
+                                                        </a></li>
+                                                        <li class="level2 nav-2-2-8 last"><a href="grid.html"> <span>Leather Shoes</span>
+                                                        </a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="level1 nav-2-3 parent"><a href="grid.html">
+                                                    <span>Watches</span> </a>
+                                                    <ul class="level1">
+                                                        <li class="level2 nav-2-3-9 first"><a href="grid.html"> <span>Digital</span>
+                                                        </a></li>
+                                                        <li class="level2 nav-2-3-10"><a href="grid.html"> <span>Chronograph</span>
+                                                        </a></li>
+                                                        <li class="level2 nav-2-3-11"><a href="grid.html">
+                                                            <span>Sports</span> </a></li>
+                                                        <li class="level2 nav-2-3-12 last"><a href="grid.html"> <span>Casual</span>
+                                                        </a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="level1 nav-2-4 parent"><a href="grid.html">
+                                                    <span>Jackets</span> </a>
+                                                    <ul class="level1">
+                                                        <li class="level2 nav-2-4-13 first"><a href="grid.html"> <span>Coats</span>
+                                                        </a></li>
+                                                        <li class="level2 nav-2-4-14"><a href="grid.html"> <span>Formal Jackets</span>
+                                                        </a></li>
+                                                        <li class="level2 nav-2-4-15"><a href="grid.html"> <span>Leather Jackets</span>
+                                                        </a></li>
+                                                        <li class="level2 nav-2-4-16 last"><a href="grid.html"> <span>Blazers</span>
+                                                        </a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="level1 nav-2-5 last parent"><a href="grid.html"> <span>Sunglasses</span>
+                                                </a>
+                                                    <ul class="level1">
+                                                        <li class="level2 nav-2-5-17 first"><a href="grid.html"> <span>Ray Ban</span>
+                                                        </a></li>
+                                                        <li class="level2 nav-2-5-18"><a href="grid.html"> <span>Fasttrack</span>
+                                                        </a></li>
+                                                        <li class="level2 nav-2-5-19"><a href="grid.html">
+                                                            <span>Police</span> </a></li>
+                                                        <li class="level2 nav-2-5-20 last"><a href="grid.html"> <span>Oakley</span>
+                                                        </a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="level0 nav-9 level-top "><a class="level-top" href="blog.html">
+                                            <span>Blog</span> </a></li>
+                                        <li class="level0 nav-10 level-top "><a class="level-top" href="blog.html">
+                                            <span>Custom</span> </a></li>
+                                        <li class="level0 nav-11 level-top last parent "><a class="level-top"
+                                                                                            href="contact_us.html">
+                                            <span>Contact</span> </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!--navmenu-->
+                </div>
+
+
+            </div>
+        </div>
+    </nav>
+    <!-- end nav -->
+    <!-- breadcrumbs -->
+
+    <!-- end breadcrumbs -->
+    <!-- Two columns content -->
+<center><h1>Liste des Employees</h1></center>
+
+
+  <div class="main-container col2-left-layout">
+    <div class="main container">
+      <div class="row">
+
+
+        <section class="col-main col-sm-9 col-sm-push-3 wow bounceInUp animated">
+
+
+ <div class="col-lg-8 col-sm-6 col-md-8">
+        <!-- Search-col -->
+        <div class="search-box">
+             <form method="GET" action="{% url 'searchEmail' %}" id="search_mini_form" name="Categories">
+
+                    {% csrf_token %}
+                    <input type="text" placeholder="Search here..." value="" maxlength="70" class="" name="searchEmail"
+                           id="search">
+                    <button id="submit-button" class="search-btn-bg"><span>Chercher par email</span></button>
+
+            </form>
+        </div>
+
+        <!-- End Search-col -->
+    </div>
+
+
+         <table class="data-table" id="my-orders-table">
+        <tr>
+            <td>firstName</td>
+            <td>LastName</td>
+            <td>nationalite</td>
+<td>email</td>
+            <td>sexe</td>
+
+        </tr>
+
+        {% for c in employees %}
+            <tr>
+
+                <td>{{ c.firstName }}</td>
+
+                <td>{{ c.lastName }}</td>
+                <td>{{ c.nationalite }}</td>
+<td>{{ c.email }}</td>
+            <td>{{ c.sexe }}</td>
+            </tr>
+        {% endfor %}
+
+    </table>
+        </section>
+
+
+      </div></div></div>
+
+</div>
+
+<!-- JavaScript -->
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/parallax.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/common.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/owl.carousel.min.js' %}"></script>
+</body>
+</html>
