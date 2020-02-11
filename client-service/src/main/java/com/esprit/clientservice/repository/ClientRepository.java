@@ -8,5 +8,5 @@ import com.esprit.clientservice.domain.Client;
 
 
 @RepositoryRestResource
-public interface ClientRepository extends JpaRepository<Client,Integer> {
+public interface ClientRepository extends JpaRepository<Client,String> {
 }

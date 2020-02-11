@@ -9,6 +9,6 @@ import com.esprit.clientservice.domain.Client;
 public  interface ClientService {
 	Client addClient(Client client);
 	List<Client> getAllClients();
-    Client updateClient(int id, Client newClient) ;
+    Client updateClient(String id, Client newClient) ;
    
 }
