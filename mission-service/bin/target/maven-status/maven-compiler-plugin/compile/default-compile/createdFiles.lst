@@ -1,0 +1,11 @@
+com\esprit\missionservice\repository\ProjetRepository.class
+com\esprit\missionservice\service\ProjetServiceImpl.class
+com\esprit\missionservice\controller\ProjetController.class
+com\esprit\missionservice\service\MissionServiceImpl.class
+com\esprit\missionservice\service\MissionService.class
+com\esprit\missionservice\MissionServiceApplication.class
+com\esprit\missionservice\controller\MissionController.class
+com\esprit\missionservice\domain\Mission.class
+com\esprit\missionservice\repository\MissionRepository.class
+com\esprit\missionservice\service\ProjetService.class
+com\esprit\missionservice\domain\Projet.class
