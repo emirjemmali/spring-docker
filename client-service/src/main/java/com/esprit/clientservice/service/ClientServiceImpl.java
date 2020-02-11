@@ -27,7 +27,7 @@ public class ClientServiceImpl implements ClientService {
 	        return clientRepository.findAll();
 	    }
 	@Override
-	public Client updateClient(int id, Client newClient) {
+	public Client updateClient(String id, Client newClient) {
 		if (clientRepository.findById(id).isPresent()) {
 			Client existingClient = clientRepository.findById(id).get();
 			existingClient.setFirstName(newClient.getFirstName());
